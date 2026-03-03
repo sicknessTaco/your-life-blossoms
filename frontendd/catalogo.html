@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogo | Your Life Blossoms</title>
+  <meta name="description" content="Catalogo completo de flores y bouquets.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-api-base="http://localhost:4242">
+  <header>
+    <div class="container nav">
+      <div class="brand">Your Life Blossoms</div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="main.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="envio.html">Envio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="catalogo-home">
+      <div>
+        <h1>Catalogo de Flores</h1>
+        <p>Explora todos nuestros arreglos y bouquets disponibles.</p>
+        <div class="cta-row">
+          <a class="btn btn-secondary" href="main.html">Volver al Inicio</a>
+        </div>
+      </div>
+      <article class="hero-card" aria-label="Nota de catalogo">
+        <div>
+          <h2>Personaliza tu pedido</h2>
+          <p>Si quieres colores o flores especificas, escribenos por WhatsApp o email.</p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="catalogo-heading">
+      <div class="section-head">
+        <h2 id="catalogo-heading">Bouquets Disponibles</h2>
+        <p>Lista editable: aqui puedes agregar nuevas flores cuando quieras.</p>
+      </div>
+
+      <div class="products">
+        <article class="product" data-product-id="rose-delight">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?rose,bouquet&sig=1" alt="Rose Delight">
+          <span class="badge">Popular</span>
+          <h3>Rose Delight</h3>
+          <p>Arreglo clasico de rosas rojas con follaje elegante.</p>
+          <div class="price">$54.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="sunny-day">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?sunflower,flowers&sig=2" alt="Sunny Day Mix">
+          <span class="badge">Seasonal</span>
+          <h3>Sunny Day Mix</h3>
+          <p>Mezcla brillante de girasoles, margaritas y tulipanes.</p>
+          <div class="price">$48.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="lavender-mist">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?lavender,flowers&sig=3" alt="Lavender Mist">
+          <span class="badge">New</span>
+          <h3>Lavender Mist</h3>
+          <p>Lavanda, lisianthus blanco y verdes suaves.</p>
+          <div class="price">$46.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="peony-blush">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?peony,flowers&sig=4" alt="Peony Blush">
+          <span class="badge">Premium</span>
+          <h3>Peony Blush</h3>
+          <p>Peonias rosadas con eucalipto y acabado romantico.</p>
+          <div class="price">$62.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="white-elegance">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?white,lily,flowers&sig=5" alt="White Elegance">
+          <span class="badge">Elegant</span>
+          <h3>White Elegance</h3>
+          <p>Lirios blancos y rosas crema para ocasiones formales.</p>
+          <div class="price">$58.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="wild-garden">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?wildflowers,bouquet&sig=6" alt="Wild Garden">
+          <span class="badge">Boho</span>
+          <h3>Wild Garden</h3>
+          <p>Mix de flores silvestres con textura natural y vibrante.</p>
+          <div class="price">$52.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="tulip-sunrise">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/flower?lock=107" alt="Tulip Sunrise">
+          <span class="badge">Spring</span>
+          <h3>Tulip Sunrise</h3>
+          <p>Tulipanes de color coral, amarillo y blanco en arreglo alegre.</p>
+          <div class="price">$49.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="orchid-luxe">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/orchid,flower?lock=108" alt="Orchid Luxe">
+          <span class="badge">Luxury</span>
+          <h3>Orchid Luxe</h3>
+          <p>Orquideas violetas en base elegante para un regalo premium.</p>
+          <div class="price">$74.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="pastel-bloom">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/pastel,flowers?lock=109" alt="Pastel Bloom">
+          <span class="badge">Soft</span>
+          <h3>Pastel Bloom</h3>
+          <p>Rosas pastel, claveles y detalles verdes de estilo romantico.</p>
+          <div class="price">$57.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="crimson-love">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/red,rose,flower?lock=110" alt="Crimson Love">
+          <span class="badge">Classic</span>
+          <h3>Crimson Love</h3>
+          <p>Rosas rojas intensas para aniversarios y momentos especiales.</p>
+          <div class="price">$65.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="blue-harmony">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/blue,flower?lock=111" alt="Blue Harmony">
+          <span class="badge">Modern</span>
+          <h3>Blue Harmony</h3>
+          <p>Flores en tonos azules y blancos con un acabado minimalista.</p>
+          <div class="price">$55.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="golden-meadow">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/yellow,flower?lock=112" alt="Golden Meadow">
+          <span class="badge">Sunny</span>
+          <h3>Golden Meadow</h3>
+          <p>Girasoles y flores amarillas para transmitir energia positiva.</p>
+          <div class="price">$53.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="velvet-night">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/purple,flower?lock=113" alt="Velvet Night">
+          <span class="badge">Evening</span>
+          <h3>Velvet Night</h3>
+          <p>Ramo en tonos vino y morado para un estilo sofisticado.</p>
+          <div class="price">$68.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="blush-garden">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/pink,flower?lock=114" alt="Blush Garden">
+          <span class="badge">Romantic</span>
+          <h3>Blush Garden</h3>
+          <p>Combinacion rosa suave con flores de temporada delicadas.</p>
+          <div class="price">$51.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="fresh-breeze">
+          <img class="product-image" data-product-image src="https://loremflickr.com/800/600/white,flower?lock=115" alt="Fresh Breeze">
+          <span class="badge">Fresh</span>
+          <h3>Fresh Breeze</h3>
+          <p>Verdes frescos, margaritas blancas y toque citrico natural.</p>
+          <div class="price">$47.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Your Life Blossoms. Yoatzin Davila.</p>
+    </div>
+  </footer>
+
+  <script src="https://js.stripe.com/v3"></script>
+  <script src="app.js"></script>
+</body>
+</html>

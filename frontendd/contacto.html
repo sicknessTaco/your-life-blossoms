@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Your Life Blossoms</title>
+  <meta name="description" content="Contacta a Your Life Blossoms para pedidos personalizados.">
+  <!--
+    LINKS DE REDES (editalos aqui):
+    Instagram: https://instagram.com/tu_usuario
+    Facebook: https://facebook.com/tu_pagina
+    TikTok: https://tiktok.com/@tu_usuario
+  -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Your Life Blossoms</div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="main.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="envio.html">Envio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>Contacto directo para pedidos y eventos.</h1>
+        <p>
+          Escribenos para cotizaciones, decoracion de eventos o arreglos
+          personalizados.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="catalogo.html">Ver Catalogo</a>
+          <a class="btn btn-secondary" href="main.html">Volver al Inicio</a>
+        </div>
+      </div>
+      <article class="hero-card" aria-label="Canales de contacto">
+        <div>
+          <h2>Atencion rapida</h2>
+          <p>Lunes a sabado de 9:00 am a 7:00 pm.</p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="canales-heading">
+      <div class="section-head">
+        <h2 id="canales-heading">Canales de contacto</h2>
+          <p>Elige el canal que prefieras y te respondemos lo antes posible.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>WhatsApp</h3>
+          <p>+52 55 8546 0879</p>
+        </article>
+        <article class="info-card">
+          <h3>Email</h3>
+          <p>lunadaviladiaz98@gmail.com</p>
+        </article>
+        <article class="info-card">
+          <h3>Ubicacion</h3>
+          <p>Ciudad de Mexico, MX</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="redes-heading">
+      <div class="section-head">
+        <h2 id="redes-heading">Redes sociales</h2>
+        <p>Siguenos para promociones, nuevos arreglos y detras de camaras.</p>
+      </div>
+
+      <div class="info-grid social-grid">
+        <article class="info-card social-card">
+          <h3>Instagram</h3>
+          <p>@your.lifeblossoms</p>
+          <a href="https://www.instagram.com/your.lifeblossoms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Your Life Blossoms">Abrir perfil</a>
+        </article>
+        <article class="info-card social-card">
+          <h3>Facebook</h3>
+          <p>Your Life Blossoms</p>
+          <a href="https://www.facebook.com/share/16SsVa76cH" target="_blank" rel="noopener noreferrer" aria-label="Facebook Your Life Blossoms">Abrir pagina</a>
+        </article>
+        <article class="info-card social-card">
+          <h3>TikTok</h3>
+          <p>@your.life.blossom</p>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Your Life Blossoms">Abrir pagina</a>
+        </article>
+        <article class="info-card social-card">
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <div class="section-head">
+        <h2 id="form-heading">Envianos un mensaje</h2>
+        <p>Responderemos por correo en cuanto recibamos tu mensaje.</p>
+      </div>
+
+      <form
+        id="contact-form"
+        class="contact-form"
+        data-emailjs-form
+        data-emailjs-service-id="service_rkj9b17"
+        data-emailjs-template-id="template_bpquqey"
+        data-emailjs-public-key="81JrQc6_MKORh94mg"
+      >
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" placeholder="tu@email.com" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuentanos que necesitas..." required></textarea>
+
+        <button class="btn btn-primary" type="submit" data-send-btn>Enviar mensaje</button>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Your Life Blossoms. Yoatzin Davila.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="contacto.js"></script>
+</body>
+</html>

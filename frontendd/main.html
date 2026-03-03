@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Life Blossoms | Floreria</title>
+  <meta name="description" content="Flores frescas para regalos, eventos y momentos especiales.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-api-base="http://localhost:4242">
+  <header>
+    <div class="container nav">
+      <div class="brand">Your Life Blossoms</div>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="sobrenosotros.html">Sobre Nosotros</a></li>
+          <li><a href="envio.html">Envio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <h1>Flores frescas para cumpleanos, aniversarios y regalos.</h1>
+        <p>Bouquets hechos a mano y personalizados para cada ocasion.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="catalogo.html">Comprar Bouquets</a>
+          <a class="btn btn-secondary" href="contacto.html">Hablar con la Florista</a>
+        </div>
+      </div>
+      <article class="hero-card" aria-label="Bouquet destacado">
+        <div>
+          <img id="featured-image" class="featured-image" src="https://source.unsplash.com/1000x750/?flowers,bouquet&sig=99" alt="Bouquet destacado">
+          <h2 id="featured-title">Destacado: Spring Blush</h2>
+          <p id="featured-description">Peonias, rosas y eucalipto en arreglo premium.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="catalog" aria-labelledby="catalog-heading">
+      <div class="section-head">
+        <h2 id="catalog-heading">Mas Vendidos</h2>
+        <p>Nuestras flores favoritas de la temporada.</p>
+      </div>
+
+      <div class="products">
+        <article class="product" data-product-id="rose-delight">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?rose,bouquet&sig=1" alt="Rose Delight">
+          <span class="badge">Popular</span>
+          <h3>Rose Delight</h3>
+          <p>Arreglo clasico de rosas rojas con follaje elegante.</p>
+          <div class="price">$54.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="sunny-day">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?sunflower,flowers&sig=2" alt="Sunny Day Mix">
+          <span class="badge">Seasonal</span>
+          <h3>Sunny Day Mix</h3>
+          <p>Mezcla brillante de girasoles, margaritas y tulipanes.</p>
+          <div class="price">$48.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+
+        <article class="product" data-product-id="lavender-mist">
+          <img class="product-image" data-product-image src="https://source.unsplash.com/800x600/?lavender,flowers&sig=3" alt="Lavender Mist">
+          <span class="badge">New</span>
+          <h3>Lavender Mist</h3>
+          <p>Lavanda, lisianthus blanco y verdes suaves.</p>
+          <div class="price">$46.00</div>
+          <button class="buy-btn" type="button">Comprar</button>
+        </article>
+      </div>
+      <div class="cta-row" style="margin-top: 18px;">
+        <a class="btn btn-primary" href="catalogo.html">Ver Catalogo Completo</a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-head">
+        <h2 id="about-heading">Por que Your Life Blossoms</h2>
+        <p>Seleccion cuidadosa de flores y materiales de decoracion.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Hecho a mano</h3>
+          <p>Cada arreglo se prepara en el momento.</p>
+        </article>
+        <article class="info-card" id="delivery">
+          <h3>Envio local</h3>
+          <p>Ventanas de entrega configuradas.</p>
+        </article>
+        <article class="info-card" id="contact">
+          <h3>Pedidos personalizados</h3>
+          <p>Contactanos para eventos y arreglos especiales.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Your Life Blossoms. Yoatzin Davila.</p>
+    </div>
+  </footer>
+  <script src="https://js.stripe.com/v3"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
