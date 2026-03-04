@@ -1,15 +1,18 @@
 const path = require("path");
-const express = require("./backend/node_modules/express");
-const app = require("./backend/api");
+const express = require("express");
+const app = require("./api");
+
 const port = Number(process.env.PORT || 4242);
-const frontendDir = path.join(__dirname, "frontendd");
+const frontendDir = path.resolve(__dirname, "../frontendd");
 
-app.use(express.static(frontendDir));
+if (require("fs").existsSync(frontendDir)) {
+  app.use(express.static(frontendDir));
 
-app.get("/", (_req, res) => {
-  res.sendFile(path.join(frontendDir, "main.html"));
-});
+  app.get("/", (_req, res) => {
+    res.sendFile(path.join(frontendDir, "main.html"));
+  });
+}
 
 app.listen(port, () => {
-  console.log(`Servidor web + API ejecutandose en http://localhost:${port}`);
+  console.log(`Servidor backend + frontend en http://localhost:${port}`);
 });

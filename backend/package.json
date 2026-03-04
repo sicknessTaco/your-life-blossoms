@@ -5,8 +5,8 @@
   "description": "Backend API for flower shop checkout using Stripe",
   "main": "api.js",
   "scripts": {
-    "start": "node ../server.js",
-    "dev": "node --watch ../server.js",
+    "start": "node server.js",
+    "dev": "node --watch server.js",
     "api:start": "node api.js",
     "api:dev": "node --watch api.js"
   },
