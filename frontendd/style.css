@@ -305,6 +305,14 @@
       opacity: 0.8;
     }
 
+    .social-card img {
+      width: min(100%, 220px);
+      border-radius: 12px;
+      display: block;
+      margin: 10px auto 12px;
+      border: 1px solid var(--line);
+    }
+
     footer {
       border-top: 1px solid var(--line);
       margin-top: 26px;
