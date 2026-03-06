@@ -1,5 +1,15 @@
 (() => {
-  const apiBase = document.body.dataset.apiBase || "http://localhost:4242";
+  const resolveApiBase = () => {
+    const fromData = document.body?.dataset?.apiBase?.trim();
+    if (fromData) return fromData.replace(/\/+$/, "");
+
+    // Local file previews do not have a valid HTTP origin for API calls.
+    if (window.location.protocol === "file:") return "http://localhost:4242";
+
+    return window.location.origin;
+  };
+
+  const apiBase = resolveApiBase();
   const statusEl = document.getElementById("shop-status");
   const featuredImageEl = document.getElementById("featured-image");
   const featuredTitleEl = document.getElementById("featured-title");

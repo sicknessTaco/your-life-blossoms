@@ -1,4 +1,14 @@
 (() => {
+  document.addEventListener("click", (event) => {
+    const trigger = event.target.closest("[data-open-url]");
+    if (!trigger) return;
+
+    const url = trigger.getAttribute("data-open-url");
+    if (!url) return;
+
+    window.open(url, "_blank", "noopener,noreferrer");
+  });
+
   const form = document.querySelector("[data-emailjs-form]");
   if (!form) return;
 

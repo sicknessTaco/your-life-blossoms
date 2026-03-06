@@ -293,6 +293,12 @@
       text-decoration: none;
     }
 
+    .social-card .social-direct-btn {
+      margin-top: 6px;
+      width: fit-content;
+      color: var(--text);
+    }
+
     .social-card a:hover {
       text-decoration: underline;
     }
@@ -305,12 +311,65 @@
       opacity: 0.8;
     }
 
-    .social-card img {
-      width: min(100%, 220px);
-      border-radius: 12px;
-      display: block;
-      margin: 10px auto 12px;
+    .social-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .quick-access-wrap {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .quick-icon-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .quick-icon-btn {
       border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .quick-icon-btn:hover {
+      border-color: var(--accent);
+      background: #fff7f8;
+    }
+
+    .quick-icon-btn svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .quick-icon-btn.net-ig {
+      color: #b73f8a;
+    }
+
+    .quick-icon-btn.net-fb {
+      color: #1877f2;
+    }
+
+    .quick-icon-btn.net-wa {
+      color: #1f9d55;
+    }
+
+    .quick-icon-btn.net-tt {
+      color: #111;
     }
 
     footer {
@@ -330,11 +389,27 @@
       .info-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .quick-icon-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 640px) {
       .products,
       .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-icon-row {
         grid-template-columns: 1fr;
       }
     }

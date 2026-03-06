@@ -7,10 +7,6 @@ const Stripe = require("stripe");
 const app = express();
 const port = Number(process.env.PORT || 4242);
 const frontendUrl = process.env.FRONTEND_URL || "http://localhost:4242";
-const successUrl =
-  process.env.STRIPE_SUCCESS_URL ||
-  `${frontendUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`;
-const cancelUrl = process.env.STRIPE_CANCEL_URL || `${frontendUrl}/cancel.html`;
 
 if (!process.env.STRIPE_SECRET_KEY) {
   throw new Error("Falta STRIPE_SECRET_KEY en variables de entorno.");
@@ -174,17 +170,52 @@ const PRODUCTS = [
 ];
 
 app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || origin === frontendUrl) {
-        return callback(null, true);
-      }
-      return callback(new Error(`Origen no permitido: ${origin}`));
-    },
-    methods: ["GET", "POST"],
-    credentials: false
-  })
+  cors(
+    (() => {
+      const allowedOrigins = new Set(
+        [
+          frontendUrl,
+          process.env.CORS_ALLOWED_ORIGINS || "",
+          "http://localhost:4242",
+          "http://127.0.0.1:4242",
+          "http://localhost:3000",
+          "http://127.0.0.1:3000"
+        ]
+          .flatMap((value) => value.split(","))
+          .map((value) => value.trim())
+          .filter(Boolean)
+      );
+
+      return {
+        origin: (origin, callback) => {
+          if (!origin || allowedOrigins.has(origin)) {
+            return callback(null, true);
+          }
+          return callback(new Error(`Origen no permitido: ${origin}`));
+        },
+        methods: ["GET", "POST", "OPTIONS"],
+        credentials: false
+      };
+    })()
+  )
 );
+
+app.set("trust proxy", 1);
+
+const getPublicOrigin = (req) => {
+  if (process.env.FRONTEND_URL) {
+    return process.env.FRONTEND_URL.replace(/\/+$/, "");
+  }
+
+  const proto =
+    (req.headers["x-forwarded-proto"] || req.protocol || "http")
+      .toString()
+      .split(",")[0]
+      .trim();
+  const host = req.get("host");
+
+  return host ? `${proto}://${host}` : "http://localhost:4242";
+};
 
 // El webhook de Stripe requiere el body crudo para validar la firma.
 app.post(
@@ -250,6 +281,12 @@ app.post("/api/create-checkout-session", async (req, res) => {
   }
 
   try {
+    const origin = getPublicOrigin(req);
+    const successUrl =
+      process.env.STRIPE_SUCCESS_URL ||
+      `${origin}/success.html?session_id={CHECKOUT_SESSION_ID}`;
+    const cancelUrl = process.env.STRIPE_CANCEL_URL || `${origin}/cancel.html`;
+
     const lineItem = product.stripe_price_id
       ? {
           price: product.stripe_price_id,
